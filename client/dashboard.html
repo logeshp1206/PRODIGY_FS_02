@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Dashboard - Employees</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Employee Management</h1>
+    <div>
+      <span id="adminName"></span>
+      <button id="logoutBtn" class="small">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="controls">
+      <button id="addBtn" class="primary">Add Employee</button>
+      <input id="search" placeholder="Search by name, email, dept..." />
+    </div>
+
+    <div class="table-wrap">
+      <table id="empTable">
+        <thead>
+          <tr>
+            <th>Name</th><th>Email</th><th>Position</th><th>Department</th><th>Salary</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3 id="modalTitle">Add Employee</h3>
+      <input id="empName" placeholder="Name" />
+      <input id="empEmail" placeholder="Email" />
+      <input id="empPosition" placeholder="Position" />
+      <input id="empDept" placeholder="Department" />
+      <input id="empSalary" placeholder="Salary" type="number" />
+      <div class="modal-actions">
+        <button id="saveBtn" class="primary">Save</button>
+        <button id="cancelBtn" class="muted">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
